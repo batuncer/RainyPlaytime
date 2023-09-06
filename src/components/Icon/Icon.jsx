@@ -13,7 +13,7 @@ import unknown from '../../img/weather-icons/unknown.svg'
 function Icon({ name }) {
   if (name === 'clear') {
     return <img src={clear} alt="clear" />
-  } else if (name === 'cloudy') {
+  } else if (name === 'Clouds') {
     return <img src={cloudy} alt="cloudy" />
   } else if (name === 'drizzle') {
     return <img src={drizzle} alt="drizzle" />

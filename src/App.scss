@@ -1,10 +1,37 @@
 @use "theme/utilities.scss";
 @use "theme/global.scss";
-html{
-    font-family: 'Raleway', sans-serif;
-}
 
-body,h1,h2,p,ul,li {
+html,body,h1,h2,p,ul,li {
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: blue;
+    
+}
+
+.weather-container{
+
+}
+.current-weather-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.details{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.future-weather-container{
+display: flex;
+    text-align: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.clear-weather {
+    background-color: white;
 }
