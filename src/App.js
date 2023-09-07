@@ -42,10 +42,10 @@ function App() {
   return (
     <div className="App">
       <Header title={siteTitle} />
+      <Search onSearch={handleSearch} />
       <main className="c-site-main" tabIndex="0">
-        <Search onSearch={handleSearch} />
         <CurrentWeather weatherData={currentWeather} />
-        <FutureWeather futureWeatherData={futureWeather} /> 
+        <FutureWeather futureWeatherData={futureWeather} />
       </main>
 
       <Footer />

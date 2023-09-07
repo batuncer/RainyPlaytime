@@ -7,7 +7,7 @@ function FutureWeather({ futureWeatherData }) {
       {futureWeatherData.map((forecast, index) => (
           <div key={index} className="future-weather-item">
             <div className="forecast-date">{forecast.dt_txt.split(" ")[1].slice(0, 5)}</div>
-            <Icon name={forecast.weather[0].main.toLowerCase()} />
+            <Icon weatherId={forecast.weather[0].id} />
             <div className="forecast-temperature">{forecast.main.temp}°C</div>
           </div>
         ))}

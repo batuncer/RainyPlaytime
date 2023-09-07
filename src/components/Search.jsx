@@ -8,13 +8,15 @@ const handleSearch = () => {
 
   return (
     <div className="search-container">
-      <input
+      <div className='search'>
+        <input
         type="text"
         placeholder="Enter a location"
         value={place}
         onChange={(e) => setPlace(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+        />
+        <button className="button-10" onClick={handleSearch}>Search</button>
+      </div>
     </div>
   );
 }
