@@ -2,16 +2,18 @@ import React from "react";
 import Icon from './Icon/Icon';
 
 function CurrentWeather({ weatherData }) {
-  //a conditional class name
-  const weatherClass = weatherData.weather[0].main.toLowerCase() === 'clear' ? 'clear-weather' : ''
+  if (!weatherData || !weatherData.weather || weatherData.weather.length === 0) {
+    return <div>Weather data not available</div>;
+  }
+
   return (
     <div className="current-weather-container">
       <Icon weatherId={weatherData.weather[0].id} />
       <h4>{weatherData.weather[0].description}</h4>
-      <div>Temperature {weatherData.main.temp_min} to {weatherData.main.temp_max}°C</div>
+      <div style={{ color: 'white' }}><b style={{ color: 'blue' }}>Temperature</b> {weatherData.main.temp_min} to {weatherData.main.temp_max}°C</div>
       <div className="details">
-        <div>Humidity {weatherData.main.humidity}</div>
-        <div>Pressure {weatherData.main.pressure}</div>
+        <div><b style={{ color: 'blue' }}>Humidity</b> {weatherData.main.humidity}</div>
+        <div><b style={{ color: 'blue' }}>Pressure</b> {weatherData.main.pressure}</div>
       </div>
     </div>
   );

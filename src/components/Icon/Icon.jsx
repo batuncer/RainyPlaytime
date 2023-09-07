@@ -38,4 +38,6 @@ function Icon({ weatherId }) {
   return <img src={icon} alt="weather-icon" />;
 }
 
+
+
 export default Icon;

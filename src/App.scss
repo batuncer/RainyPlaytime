@@ -1,34 +1,32 @@
 @use "theme/utilities.scss";
 @use "theme/global.scss";
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 html,body,h1,h2,p,ul,li {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    background-color: blue;
+    background-color: rgb(72, 168, 247)
+ 
     
 }
 
-
-
-
-.search-container{
-    height: 100px;
-    
-   
-}
 
 .search{
     margin:30px 0 0 20px;
 
 }
 .search:first-child{
-    margin-left: 10px;
-    padding: 6px 14px;
+    margin: 10px 10px 0 10px;
+    padding: 16px 14px;
     border-radius: 6px;
     border: none;
     color: #fff;
-    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+    background: linear-gradient(180deg, #6ca1f2 0%, #3683f6 100%);
     background-origin: border-box;
     box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
 }
@@ -41,17 +39,22 @@ html,body,h1,h2,p,ul,li {
 input{
     border-radius: 5px;
     border:none;
+    width: 400px;
+    height: 25px;
+    font-size: large;
+    margin-left:5px
 }
 
 input:focus {
     outline: none;
+
 }
 .button-10 {
     margin-left: 10px;
     padding: 6px 14px;
     border-radius: 6px;
     border: none;
-    color: #4B91F7;
+    color: white;
     background: linear-gradient(180deg, white 0%, green 100%);
     background-origin: border-box;
     box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
@@ -59,36 +62,41 @@ input:focus {
  
 }
 
-
 .c-site-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: blue;
+    min-height: 70vh;
+    background-color: rgb(72, 168, 247);
+    
 }
 .current-weather-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     
+}
+
+h4{
+    color:white;
+    margin-bottom: 10px;
 }
 
 .details{
     display: flex;
     justify-content:space-evenly;
+    color: white;
 }
+
 
 .future-weather-container{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-around;
     text-align: center;
-    margin: 20px;
-}
-
-.clear-weather {
-    background-color: white;
+    margin-top: 100px;
+    
 }
