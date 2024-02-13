@@ -6,61 +6,26 @@
     padding: 0;
     border: 0;
 }
-html,body,h1,h2,p,ul,li {
+
+html,
+body,
+h1,
+h2,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
     background-color: rgb(72, 168, 247)
- 
-    
 }
 
 
-.search{
-    margin:30px 0 0 20px;
 
-}
-.search:first-child{
-    margin: 10px 10px 0 10px;
-    padding: 16px 14px;
-    border-radius: 6px;
-    border: none;
-    color: #fff;
-    background: linear-gradient(180deg, #6ca1f2 0%, #3683f6 100%);
-    background-origin: border-box;
-    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
-}
 
-.button-10:focus {
-    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
-    outline: 0;
-}
 
-input{
-    border-radius: 5px;
-    border:none;
-    width: 400px;
-    height: 25px;
-    font-size: large;
-    margin-left:5px
-}
 
-input:focus {
-    outline: none;
 
-}
-.button-10 {
-    margin-left: 10px;
-    padding: 6px 14px;
-    border-radius: 6px;
-    border: none;
-    color: white;
-    background: linear-gradient(180deg, white 0%, green 100%);
-    background-origin: border-box;
-    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
-
- 
-}
 
 .c-site-main {
     display: flex;
@@ -69,34 +34,35 @@ input:focus {
     align-items: center;
     min-height: 70vh;
     background-color: rgb(72, 168, 247);
-    
+
 }
-.current-weather-container{
+
+.current-weather-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    
+
 }
 
-h4{
-    color:white;
+h4 {
+    color: white;
     margin-bottom: 10px;
 }
 
-.details{
+.details {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     color: white;
 }
 
 
-.future-weather-container{
+.future-weather-container {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
     text-align: center;
     margin-top: 100px;
-    
+
 }

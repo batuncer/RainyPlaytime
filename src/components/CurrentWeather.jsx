@@ -1,21 +1,27 @@
 import React from "react";
-import Icon from './Icon/Icon';
+import Icon from "./Icon/Icon";
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
 
 function CurrentWeather({ weatherData }) {
   if (!weatherData || !weatherData.weather || weatherData.weather.length === 0) {
     return <div>Weather data not available</div>;
   }
 
+  const isCloudy = weatherData.weather[0].main === "Clouds";
+
   return (
-    <div className="current-weather-container">
+    <Stack className="current-weather-container" spacing={2} sx={{ backgroundColor: "transparent", }}>
       <Icon weatherId={weatherData.weather[0].id} />
       <h4>{weatherData.weather[0].description}</h4>
-      <div style={{ color: 'white' }}><b style={{ color: 'blue' }}>Temperature</b> {weatherData.main.temp_min} to {weatherData.main.temp_max}°C</div>
-      <div className="details">
-        <div><b style={{ color: 'blue' }}>Humidity</b> {weatherData.main.humidity}</div>
-        <div><b style={{ color: 'blue' }}>Pressure</b> {weatherData.main.pressure}</div>
+      <Grid style={{ color: 'inherit' }}><b style={{ color: 'black' }}>Temperature: </b> {weatherData.main.temp_min} to {weatherData.main.temp_max}°C</Grid>
+
+      <div style={{ display: "flex", gap: "20px" }}>
+        <Grid style={{ color: 'inherit' }}><b style={{ color: 'black' }}>Humidity: </b> {weatherData.main.humidity}</Grid>
+        <Grid style={{ color: 'inherit' }}> <div><b style={{ color: 'black' }}>Pressure: </b> {weatherData.main.pressure}</div>
+        </Grid>
       </div>
-    </div>
+    </Stack >
   );
 }
 

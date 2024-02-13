@@ -1,11 +1,11 @@
 import "./App.scss";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import FutureWeather from "./components/FutureWeather";
-import CurrentWeather from './components/CurrentWeather';
+import CurrentWeather from "./components/CurrentWeather";
 import Search from "./components/Search";
-import axios from "axios"; 
+import axios from "axios";
 
 //configs
 const siteTitle = process.env.REACT_APP_SITE_TITLE ?? "BAKI Weather";
@@ -15,30 +15,30 @@ function App() {
   const [futureWeather, setFutureWeather] = useState([]);
   useEffect(() => {
     // London weather data as default
-    const apiKey = "7dd92de43fabf8d0a9cd1233f6fd8115"; 
+    const apiKey = "7dd92de43fabf8d0a9cd1233f6fd8115";
     const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apiKey}`;
 
     axios
       .get(apiUrl)
       .then((response) => {
-
         // Update state with fetched data
         setCurrentWeather(response.data);
       })
       .catch((error) => {
         console.error("Error fetching weather data:", error);
       });
-          const futureWeatherUrl = `http://api.openweathermap.org/data/2.5/forecast?q=London&cnt=8&units=metric&appid=${apiKey}`;
 
-          axios
-            .get(futureWeatherUrl)
-            .then((response) => {
-              setFutureWeather(response.data.list);
-            })
-            .catch((error) => {
-              console.error("Error fetching future weather data:", error);
-            });
-  }, []); 
+    const futureWeatherUrl = `http://api.openweathermap.org/data/2.5/forecast?q=London&cnt=8&units=metric&appid=${apiKey}`;
+
+    axios
+      .get(futureWeatherUrl)
+      .then((response) => {
+        setFutureWeather(response.data.list);
+      })
+      .catch((error) => {
+        console.error("Error fetching future weather data:", error);
+      });
+  }, []);
 
   const handleSearch = (place) => {
     const apiKey = "7dd92de43fabf8d0a9cd1233f6fd8115";
@@ -59,7 +59,7 @@ function App() {
       })
       .catch((error) => {
         console.error("Error fetching weather data:", error);
-        // Handle error 
+        // Handle error
       });
   };
 
