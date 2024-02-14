@@ -22,18 +22,12 @@ li {
 
 
 
-
-
-
-
-
 .c-site-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
-    background-color: rgb(72, 168, 247);
+    min-height: 100vh;
 
 }
 
@@ -43,7 +37,6 @@ li {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-
 }
 
 h4 {
@@ -57,12 +50,14 @@ h4 {
     color: white;
 }
 
-
 .future-weather-container {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
     text-align: center;
     margin-top: 100px;
+}
 
+.App {
+    background-image: url(./img/instructions/512.jpg);
 }
