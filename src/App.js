@@ -22,7 +22,7 @@ function App() {
   // Function to fetch current weather data
   const fetchCurrentWeather = () => {
     axios
-      .get("http://localhost:5000/currentWeather") // Sunucu URL'sini belirtin
+      .get("https://weather1-ekob.onrender.com/currentWeather") // Sunucu URL'sini belirtin
       .then((response) => {
         setCurrentWeather(response.data);
       })
@@ -33,7 +33,7 @@ function App() {
 
   const fetchFutureWeather = () => {
     axios
-      .get("http://localhost:5000/futureWeather?cnt=8")
+      .get("https://weather1-ekob.onrender.com/futureWeather?cnt=8")
       .then((response) => {
         setFutureWeather(response.data);
       })
@@ -44,7 +44,7 @@ function App() {
   // Function to handle search
   const handleSearch = (place) => {
     axios
-      .get(`http://localhost:5000/search/${place}`)
+      .get(`https://weather1-ekob.onrender.com/${place}`)
       .then((response) => {
         setCurrentWeather(response.data.currentWeather);
         setFutureWeather(response.data.futureWeather);

@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = 5000; // veya başka bir port numarası
+const url = 5000; // veya başka bir port numarası
 
 const apiKey = "7dd92de43fabf8d0a9cd1233f6fd8115";
 app.use(cors());
