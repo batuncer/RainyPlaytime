@@ -12,6 +12,7 @@ function CurrentWeather({ weatherData }) {
 
   return (
     <Stack className="current-weather-container" spacing={2} sx={{ backgroundColor: "transparent", }}>
+      <h3 style={{ color: "white" }}>{weatherData.name}</h3>
       <Icon weatherId={weatherData.weather[0].id} />
       <h4>{weatherData.weather[0].description}</h4>
       <Grid style={{ color: 'inherit' }}><b style={{ color: 'black' }}>Temperature: </b> {weatherData.main.temp_min} to {weatherData.main.temp_max}°C</Grid>
