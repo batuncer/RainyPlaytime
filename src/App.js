@@ -22,7 +22,7 @@ function App() {
   // Function to fetch current weather data
   const fetchCurrentWeather = () => {
     axios
-      .get("https://weather1-ekob.onrender.com") // Sunucu URL'sini belirtin
+      .get("https://weather1-ekob.onrender.com/currentWeather")
       .then((response) => {
         setCurrentWeather(response.data);
       })

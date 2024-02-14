@@ -35,7 +35,7 @@ app.get("/search/:place", async (req, res) => {
   const place = req.params.place;
   try {
     const response = await axios.get(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${place}&cnt=8&units=metric&appid=${apiKey}`
+      `http://api.openweathermap.org/data/2.5/forecast?q=${place}&cnt=7&units=metric&appid=${apiKey}`
     );
     res.json({
       currentWeather: response.data.list[0],
